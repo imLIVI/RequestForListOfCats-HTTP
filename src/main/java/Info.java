@@ -5,7 +5,7 @@ public class Info {
     private final String text;
     private final String type;
     private final String user;
-    private final String upvotes;
+    private final int upvotes;
 
     //с помощью @JsonProperty конструктор понимает как поля в json соотносятся с полями в Info.class
     public Info(
@@ -13,7 +13,7 @@ public class Info {
             @JsonProperty("text") String text,
             @JsonProperty("type") String type,
             @JsonProperty("user") String user,
-            @JsonProperty("upvotes") String upvotes) {
+            @JsonProperty("upvotes") int upvotes) {
         this.id = id;
         this.text = text;
         this.type = type;
@@ -37,7 +37,7 @@ public class Info {
         return user;
     }
 
-    public String getUpvotes() {
+    public int getUpvotes() {
         return upvotes;
     }
 

@@ -38,7 +38,7 @@ public class Main {
         List<Info> info = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<Info>>() {
         });
         info.stream()
-                .filter(in -> in.getUpvotes() != null && Integer.valueOf(in.getUpvotes()) > 0)
+                .filter(in -> in.getUpvotes() > 0)
                 .forEach(System.out::println);
     }
 }
